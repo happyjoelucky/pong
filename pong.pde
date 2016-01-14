@@ -56,7 +56,7 @@ void draw() {
         ball_dir *= -1;
 
         // Send a message to the main page updating the score...
-        score += 100;
+        score += 1;
         document.getElementById("score").innerHTML = "Score = " + score;
 
         // Adding in the total hits here...
@@ -76,11 +76,11 @@ void draw() {
         }
     } 
 
-    // If ball hits back wall, reverse direction
+    // If ball hits back wall, change direction
     if(ball_x < ball_size && ball_dir == -1) {
         ball_dir *= -1;
     }
-    // If the ball is touching top or bottom edge, reverse direction
+    // If the ball is touching top or bottom edge, change direction
     if(ball_y >= height-ball_size) {
         dy = dy * -1;
     }
