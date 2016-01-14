@@ -13,7 +13,7 @@ var dist_wall = 8;
 
 // Adding total hits here...
 //float total = 0;
-float highscore = over 9000;
+float highscore = 0;
 float score = 0;
 
 void setup() {
@@ -76,11 +76,11 @@ void draw() {
         }
     } 
 
-    // If ball hits back wall, change direction
+    // If ball hits back wall, reverse direction
     if(ball_x < ball_size && ball_dir == -1) {
         ball_dir *= -1;
     }
-    // If the ball is touching top or bottom edge, change direction
+    // If the ball is touching top or bottom edge, reverse direction
     if(ball_y >= height-ball_size) {
         dy = dy * -1;
     }
